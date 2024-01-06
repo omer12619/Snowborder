@@ -18,6 +18,6 @@ public class DustTrail : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        m_ParticleSystem.Stop();
+       m_ParticleSystem.Stop();
     }
 }

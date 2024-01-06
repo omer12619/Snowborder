@@ -13,7 +13,9 @@ public class Crash : MonoBehaviour
     {
         if (collision.tag == "Ground")
         {
+            FindObjectOfType<PlayerMove>().dismove();
             Debug.Log("Ouch,hit my head");
+            GetComponent<AudioSource>().Play();
             m_ParticleSystem.Play();
             Invoke("load_zero",0.5f);
         }

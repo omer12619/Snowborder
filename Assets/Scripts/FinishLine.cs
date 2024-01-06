@@ -15,6 +15,7 @@ public class FinishLine : MonoBehaviour
             Debug.Log("OHH WE WIN");
             m_ParticleSystem.Play();
             Invoke("load_zero", 0.5f);
+            GetComponent<AudioSource>().Play();
 
 
 
