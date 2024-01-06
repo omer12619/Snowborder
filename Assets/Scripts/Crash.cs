@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Crash : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class Crash : MonoBehaviour
         if (collision.tag == "Ground")
         {
             Debug.Log("Ouch,hit my head");
+            Invoke("load_zero",0.5f);
         }
+    }
+    private void load_zero()
+    {
+        SceneManager.LoadScene(0);
     }
 }
