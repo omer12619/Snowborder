@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class Crash : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    [SerializeField] ParticleSystem m_ParticleSystem;
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +14,7 @@ public class Crash : MonoBehaviour
         if (collision.tag == "Ground")
         {
             Debug.Log("Ouch,hit my head");
+            m_ParticleSystem.Play();
             Invoke("load_zero",0.5f);
         }
     }

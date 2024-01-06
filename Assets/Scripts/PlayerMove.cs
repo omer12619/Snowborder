@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float route;
+
     Rigidbody2D rdb;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlayerMove : MonoBehaviour
         {
             rdb.AddTorque(-route);
         }
+
 
 
     }
